@@ -3,15 +3,20 @@
 </div>
 <div *ngIf="current.temperature!==0">
     <div>
-        <span>{{current.city}},{{current.country}}</span>
-        <br/>
-        <span>{{current.date | date:"fullDate"}}</span>
+        <div class="text">
+            {{current.city}},{{current.country}}
+        </div>
+        
+        <div class="text">
+           {{current.date | date:"fullDate"}}
+        </div>
+        
     </div>
     <div>
-        <img [src]="current.image" alt="image"/>
-        <span>{{current.temperature | number: "1.0-0"}}&#8457;</span>
+       <span class="text"><img [src]="current.image" alt="image"/></span> 
+        <span class="text">{{current.temperature | number: "1.0-0"}}&#8457;</span>
     </div>
-    <div>
+    <div class="text">
         {{current.description}}
     </div>
 </div>

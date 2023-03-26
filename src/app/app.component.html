@@ -1,9 +1,13 @@
-<div style="text-align: center;">
-<h1> Local Cast Weather </h1>
-<div> your City, your weather, right now!</div>
 <div>
-    <app-city-search></app-city-search>
+<mat-toolbar>
+    
+     <span id="title">Local Cast Weather</span> 
+     <app-city-search id="input" (searchEvent)="doSearch($event) "></app-city-search>
+   
+</mat-toolbar>
 </div>
-<h2>Current Weather</h2>
-<app-current-weather></app-current-weather>
+<div class ="display">
+<mat-card >
+    <app-current-weather [current]="currentWeather"></app-current-weather>
+</mat-card>
 </div>
